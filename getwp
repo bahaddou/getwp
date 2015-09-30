@@ -1,0 +1,9 @@
+#!/bin/bash
+#make sure you got permission 777 to thise file and sited on /bin/
+#syntax : #getwp
+rm -rf *
+wget  wordpress.org/latest.tar.gz &>/dev/null && echo "Downloading the core : OK"
+chmod 777 latest.tar.gz && tar xzf latest.tar.gz &>/dev/null && echo "Decopmressing the core : OK"
+mv wordpress/* ./
+rm -rf latest.tar.gz var && echo "Cleaning : OK"
+echo "your site is ready!"
